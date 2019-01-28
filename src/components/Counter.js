@@ -17,6 +17,17 @@ class Counter extends Component {
         // Fill in the two button onClick methods
         // Upon clicking these buttons, the count
         // should decrement or increment accordingly
+
+        const handleIncrement = (e, count) => {
+            e.preventDefault();
+            props.increment(count++);
+        }
+
+        const handleDecrement = (e, count) => {
+            e.preventDefault();
+            props.decrement(count--);
+        }
+
         return (
             <p>
                 Clicked: {this.props.count} times
